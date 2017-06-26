@@ -1,0 +1,12 @@
+.container
+  .row
+    .col-sm-12
+      %h1.text-center All Wineries in your Area
+
+- @businesses.each do |biz|
+  .row.clearfix
+    .col-sm-6
+      %h2
+        = biz.name
+    .col-sm-6
+      %img{:src => "#{biz.image_url}"}/
